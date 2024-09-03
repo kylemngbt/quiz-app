@@ -36,3 +36,7 @@ const questions = [
     ]
   },
 ];
+
+const questionElement = document.querySelector("#question");
+const answerButton = document.querySelector("#answer-buttons");
+const nextButton = document.querySelector("#next-btn");
