@@ -38,11 +38,12 @@ const questions = [
 ];
 
 const questionElement = document.querySelector("#question");
-const answerButton = document.querySelector("#answer-buttons");
-const nextButtons = document.querySelector("#next-btn");
+const answerButtons = document.querySelector("#answer-buttons");
+const nextButton = document.querySelector("#next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+
 
 
 function showQuestion() {
