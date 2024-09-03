@@ -44,6 +44,19 @@ const nextButton = document.querySelector("#next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
+function showQuestion() {
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.textContent = `${questionNo}. ${currentQuestion.question}`;
+
+  currentQuestion.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.textContent = answer.text;
+    button.classList.add("btn");
+    answerButton.appendChild(button);
+  })
+}
+
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
