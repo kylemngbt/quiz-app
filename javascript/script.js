@@ -40,3 +40,13 @@ const questions = [
 const questionElement = document.querySelector("#question");
 const answerButton = document.querySelector("#answer-buttons");
 const nextButton = document.querySelector("#next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  nextButton.textContent = "Next";
+  showQuestion();
+}
