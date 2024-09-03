@@ -94,6 +94,13 @@ function startQuiz() {
   showQuestion();
 }
 
+function showScore() {
+  resetState();
+  questionElement.textContent = `You scored ${score} out of ${questions.length}!`;
+  nextButton.textContent = "Play Again";
+  nextButton.style.display = "block";
+}
+
 function handleNextButton() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
