@@ -44,7 +44,12 @@ const nextButton = document.querySelector("#next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-
+function resetState() {
+  nextButton.style.display = "none";
+  while(answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
 
 function showQuestion() {
   resetState();
