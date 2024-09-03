@@ -72,6 +72,10 @@ function showQuestion() {
     button.textContent = answer.text;
     button.classList.add("btn");
     answerButtons.appendChild(button);
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
   })
 }
 
